@@ -1,0 +1,36 @@
+﻿<Window x:Class="SendMessageApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SendMessageApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="244" Width="329" ResizeMode="NoResize" Topmost="True">
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" Text="测试用界面就随意了些" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="202" TextAlignment="Center" FontSize="18"/>
+        <GroupBox Header="数据交互" HorizontalAlignment="Center" Height="139" Margin="0,50,0,0" VerticalAlignment="Top" Width="237">
+            <Grid>
+                <Button x:Name="StartProc" Content="启动进度条" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="65" IsDefault="True" Margin="33,8,0,0" Click="StartProc_Click"/>
+                <StackPanel HorizontalAlignment="Left" Margin="6,33,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Label Content="最小值：" Height="22" Width="45" FontSize="10"/>
+                    <TextBox x:Name="Min" Height="15" Text="0" TextWrapping="Wrap" Width="55"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Margin="115,33,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Label Content="最大值：" Height="22" Width="45" FontSize="10"/>
+                    <TextBox x:Name="Max" Height="15" Text="100" TextWrapping="Wrap" Width="55"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Margin="23,60,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Label Content="进度：" Height="22" Width="36" FontSize="10"/>
+                    <TextBox x:Name="Val" Height="17" Text="100" TextWrapping="Wrap" Width="30"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Left" Margin="127,60,0,0" Orientation="Horizontal" VerticalAlignment="Top">
+                    <Label Content="信息：" Height="22" Width="36" FontSize="10"/>
+                    <TextBox x:Name="Mes" Height="17" Text="初始化" TextWrapping="Wrap" Width="40" FontSize="10" TextAlignment="Justify"/>
+                </StackPanel>
+                <Button x:Name="SendProcMessage" Content="发送 进度、信息" HorizontalAlignment="Center" Height="20" VerticalAlignment="Top" Width="98" IsDefault="True" Margin="0,88,0,0" Click="SendProcMessage_Click"/>
+                <Button x:Name="StopProc" Content="关闭进度条" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="65" IsDefault="True" Margin="127,8,0,0" Click="StopProc_Click"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
